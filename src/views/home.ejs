@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome here</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+    
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Category Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% resultSet.recordset.forEach(element => { %>
+          <tr>
+            <td><%= element.ProductName %></td>
+            <td><%= element.CategoryName %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+  </body>
+</html>
